@@ -11,9 +11,4 @@ snakemake -p --reason --latency-wait 100 --use-conda --configfile LyRic/config_E
 
 #generate DAG to visualize workflow as SVG image:
 snakemake -p --configfile LyRic/config_EXAMPLE_slurm.json -s LyRic/master.smk --forceall --rulegraph > EXAMPLE_dag.dot
-cat EXAMPLE_dag.dot| dot -Tsvg > EXAMPLE_dag.svg
-
-
-
-
-
+cat EXAMPLE_dag.dot | dot -Tsvg > EXAMPLE_dag.svg
