@@ -1,0 +1,204 @@
+{
+	"__default__": {
+		"partition": "standard",
+		"mem": "5G",
+		"time": "03:00:00",
+		"email": "tmadry@ibch.poznan.pl",
+		"notify": "ae",
+		"err": "{workflow.basedir}/qsub_logs/",
+		"out": "{workflow.basedir}/qsub_logs/",
+		"threads": "",
+		"tmp": "2G"
+	},
+	"makeStarIndex": {
+		"mem": "40G",
+		"time": "06:00:00"
+	},
+	"strandedGffToBed": {
+		"mem": "40G"
+	},
+	"strandGffs": {
+		"mem": "10G",
+		"time": "15:00:00"
+	},
+	"makeReadsBlastDB": {
+		"time": "00:20:00",
+		"mem": "2G"
+	},
+	"getHiSeqSupportedHCGMs": {
+		"mem": "15G"
+	},
+	"getReadLengthSummary": {
+		"mem": "20G",
+		"time": "01:30:00"
+	},
+	"makeBigWigExonicRegions": {
+		"time": "06:00:00"
+	},
+	"mergedUnfilteredSirvReads": {
+		"time": "05:30:00"
+	},
+	"plotReadLength": {
+		"mem": "25G",
+		"time": "01:30:00"
+	},
+	"aggTmStats": {
+		"time": "04:00:00"
+	},
+	"compareTargetsToTms": {
+		"tmp": "30G",
+		"mem": "15G"
+	},
+	"removeIntraPriming": {
+		"mem": "25G"
+	},
+	"getGeneReadCoverageStats": {
+		"mem": "25G",
+		"time": "20:00:00"
+	},
+	"longReadMapping": {
+		"mem": "40G",
+		"time": "20:00:00",
+		"threads": "--ntasks=1 --cpus-per-task=12",
+		"partition": "standard"
+	},
+	"hiSeqReadMapping": {
+		"mem": "70G",
+		"time": "20:00:00",
+		"partition": "standard",
+		"threads": "--ntasks=1 --cpus-per-task=12"
+	},
+	"highConfidenceReads": {
+		"time": "36:00:00",
+		"mem": "50G"
+	},
+	"readBedToGff": {
+		"partition": "standard",
+		"time": "10:00:00",
+		"mem": "5G"
+	},
+	"polyAmapping": {
+		"time": "3:00:00",
+		"mem": "2G"
+	},
+	"getPolyAreadsList": {
+		"mem": "1G"
+	},
+	"getPolyAreadsStats": {
+		"time": "6:00:00"
+	},
+	"makeIntrons": {
+		"time": "10:00:00",
+		"partition": "standard",
+		"mem": "20G"
+	},
+	"getIntronMotif": {
+		"mem": "25G"
+	},
+	"getReadsSpliceSites": {
+		"mem": "10G"
+	},
+	"getHiSSStats": {
+		"mem": "65G",
+		"time": "06:00:00"
+	},
+	"mergeWithRef": {
+		"mem": "20G",
+		"time": "06:00:00"
+	},
+	"mergedReads": {
+		"mem": "120G",
+		"time": "36:00:00"
+	},
+	"mergedReadsToBed": {
+		"mem": "10G"
+	},
+	"collapseGencode": {
+		"mem": "10G"
+	},
+	"getHiSeqCanonicalIntronsList1": {
+		"time": "6:00:00"
+	},
+	"getHiSeqCanonicalIntronsList2": {
+		"mem": "60G",
+		"time": "16:00:00",
+		"threads": "--ntasks=1 --cpus-per-task=6"
+	},
+	"plotHistTmLengthStats": {
+		"mem": "20G"
+	},
+	"catMergedReadsForGroupedSampleReps": {
+		"mem": "20G"
+	},
+	"gffcompareToAnnotation": {
+		"mem": "10G"
+	},
+	"gffcompareToSirvAnnotation": {
+		"mem": "1G"
+	},
+	"getHCGMintrons": {
+		"mem": "20G"
+	},
+	"getClsSpliceJunctions": {
+		"time": "04:30:00",
+		"mem": "10G"
+	},
+	"getTmSpliceSites": {
+		"time": "04:30:00"
+	},
+	"getCompareClsGencodeSJsStats": {
+		"time": "04:30:00"
+	},
+	"getGffCompareStats": {
+		"time": "04:30:00"
+	},
+	"cageSupportedfivepEnds": {
+		"mem": "15G"
+	},
+	"getReadBiotypeClassification": {
+		"tmp": "30G",
+		"time": "30:00:00"
+	},
+	"aggGeneidScores": {
+		"threads": "--ntasks=1 --cpus-per-task=8"
+	},
+	"plotGeneidScores": {
+		"mem": "35G",
+		"time": "5:30:00"
+	},
+	"getHiSeqMappingStats": {
+		"time": "8:00:00",
+		"partition": "standard"
+	},
+	"mergeTmsWithGencode": {
+		"mem": "10G",
+		"time": "5:00:00"
+	},
+	"polyASupportedthreepEnds": {
+		"mem": "15G"
+	},
+	"readBamToBed": {
+		"mem": "1G"
+	},
+	"tmergeAll": {
+		"tmp": "60G",
+		"time": "12:00:00",
+		"mem": "20G",
+		"partition": "standard"
+	},
+	"getReadProfileMatrix": {
+		"time": "12:00:00",
+		"threads": "--ntasks=1 --cpus-per-task=6",
+		"partition": "standard",
+		"mem": "15G"
+	},
+	"plotReadProfileMatrix": {
+		"mem": "20G"
+	},
+	"bamqc": {
+		"mem": "25G"
+	},
+	"mergedReadsGroupedSampleReps": {
+		"mem": "15G"
+	}
+}
