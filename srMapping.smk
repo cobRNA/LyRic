@@ -1,14 +1,24 @@
 rule makeStarIndex:
 	input: genome = config["GENOMESDIR"] +"{genome}.sorted.fa"
+	params:
+		useHiSeq = lambda wildcards: 'pleasedo' if sampleAnnotDict[wildcards.techname + "_" + wildcards.capDesign + "_" + wildcards.sizeFrac + "_" + wildcards.sampleRep]['use_matched_HiSeq'] else 'donot'
 	output: config["GENOMESDIR"] + "STARshort_indices/" + "{genome}/SA"
 	conda: "envs/star_env.yml"
 	shell:
 		'''
+echoerr "#########################"
+echoerr "Use HiSeq SJs: {params.useHiSeq}"
+echoerr "#########################"
+if [ "{params.useHiSeq}" = "pleasedo" ]; then
 uuid=$(uuidgen)
 mkdir -p {TMPDIR}/$uuid ; 
 mkdir -p $(dirname {output}); 
 STAR --runMode genomeGenerate --runThreadN 3 --genomeDir {TMPDIR}/$uuid --genomeFastaFiles {input}
 mv -f {TMPDIR}/$uuid/* $(dirname {output})
+else
+echo "noSRsupport" > {output}
+fi
+
 		'''
 
 
