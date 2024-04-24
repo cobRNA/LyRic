@@ -1,1 +1,9 @@
 /random
+/junk
+/genomes
+/targets
+/fastqs
+/annotations
+*.zip
+/notes
+/BAD_*
