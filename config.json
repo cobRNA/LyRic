@@ -1,0 +1,46 @@
+{
+	"GENOMESDIR": "genomes/",
+	"produceStatPlots": true,
+	"produceTrackHub": false,
+	"produceHtmlStatsTable": true,
+	"capDesignToGenome": {
+		"Pre": "dr11",
+		"Post": "dr11"
+	},
+	"capDesignToTargetsGff": {
+		"Post": "targets/targets.merged.probed.gtf"
+	},
+	"capDesignToCapDesign": {
+		"Pre": "Post",
+		"Post": "Post"
+	},
+	"sampleRepGroupBy": [
+		"captureDesign",
+		"libraryPrep",
+		"species",
+		"captureDesign",
+		"sizeFrac",
+		"tissue",
+		"cellFrac",
+		"reverse_transcriptase"
+	],
+	"CAPTURE": true,
+	"SAMPLE_ANNOT": "LyRic/sample_annotations.tsv",
+	"genomeToAnnotGtf": {
+		"dr11": "annotations/ERCC+ensembl.104+SIRV_with_gene_rec.gtf"
+	},
+	"USE_MATCHED_ILLUMINA": false,
+	"PROJECT_NAME": "MK",
+	"PROJECT_LONG_NAME": "GENCODE MK",
+	"PROJECT_CONTACT_EMAIL": "tmadry@ibch.poznan.pl",
+	"TRACK_HUB_BASE_URL": "https://thats.not/gonna/work/lol/",
+	"SIRVinfo": "annotations/SIRV_Set1_Lot00141_info-170612a.tsv",
+	"minimumTmergeReadSupport": [
+        "2"
+    ],
+    "exonOverhangTolerance": "8",
+	"genomeToCAGEpeaks": {
+		"dr11": "annotations/cage/dr11.cage.bed"
+		},
+	"REPEATMASKER_DIR": "annotations/repeatMasker/"
+}
