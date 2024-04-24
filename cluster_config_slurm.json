@@ -7,8 +7,7 @@
 		"notify": "ae",
 		"err": "{workflow.basedir}/qsub_logs/",
 		"out": "{workflow.basedir}/qsub_logs/",
-		"threads": "",
-		"tmp": "2G"
+		"threads": "--ntasks=1 --cpus-per-task=6"
 	},
 	"makeStarIndex": {
 		"mem": "40G",
@@ -46,7 +45,6 @@
 		"time": "04:00:00"
 	},
 	"compareTargetsToTms": {
-		"tmp": "30G",
 		"mem": "15G"
 	},
 	"removeIntraPriming": {
@@ -156,7 +154,6 @@
 		"mem": "15G"
 	},
 	"getReadBiotypeClassification": {
-		"tmp": "30G",
 		"time": "30:00:00"
 	},
 	"aggGeneidScores": {
@@ -181,7 +178,6 @@
 		"mem": "1G"
 	},
 	"tmergeAll": {
-		"tmp": "60G",
 		"time": "12:00:00",
 		"mem": "20G",
 		"partition": "standard"
