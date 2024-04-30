@@ -28,8 +28,9 @@ mamba create -c conda-forge -c bioconda -n snakemake snakemake=6.15.5
 
 ## Config files:
 
-1. Made `run_snakemake_EXAMPLE.sh` compatible with SLURM Workload Manager -> `run_snakemake_EXAMPLE_slurm.sh`
+1. Made `run_snakemake_EXAMPLE.sh` compatible with SLURM Workload Manager -> `run_snakemake_slurm.sh`
 2. Made `cluster_config.json` compatible with SLURM Workload Manager -> `cluster_config_slurm.json`
+3. Made shitty `config_EXAMPLE.json` usable -> `config.json`
 
 ## Troubleshooting:
 
