@@ -42,5 +42,8 @@
 	"genomeToCAGEpeaks": {
 		"dr11": "annotations/cage/dr11.cage.bed"
 		},
+	"genomeToDHSpeaks": {
+		"dr11": "annotations/dhs/dr11.dhs.bed"
+		},	
 	"REPEATMASKER_DIR": "annotations/repeatMasker/"
 }
